@@ -69,7 +69,6 @@ def get_winner(insta_account_name, post_link):
 
 def main():
     insta_account_name = 'wowbeautybar.ru'
-    # post_link = 'https://www.instagram.com/p/BtON034lPhu/'
 
     parser = argparse.ArgumentParser(description='Enter your post link')
     parser.add_argument('post_link', help='Enter post url')
