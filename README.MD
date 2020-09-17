@@ -18,6 +18,7 @@ Create file '.env' and add the code:
 ```
 INSTA_LOGIN = your_instagram_login
 INSTA_PASS = your_instagram_password
+INSTA_GROUP_NAME = your_group_name
 ```
 
 Install requirements modules:
@@ -34,12 +35,6 @@ Open and run 'main.py'.
 python main.py post_url
 ```
 
-
-## Additional information
-You have to enter your instagram account name. For it change variable 'insta_account_name' in **main()** function:
-```
-insta_account_name = your_instagram_account_name
-```
 
 ## Project goal
 
