@@ -34,23 +34,7 @@ def get_performed_users(insta_account_name, post_link):
             performed_users.append(nickname)
 
     return performed_users
-
-
-def get_winner(insta_account_name, post_link):
-    performed_users = get_performed_users(insta_account_name, post_link)
-    print(choice(performed_users))
-
-
-def main():
-    insta_account_name = os.getenv('INSTA_GROUP_NAME')
-
-    parser = argparse.ArgumentParser(description='Enter your post link')
-    parser.add_argument('post_link', help='Enter post url')
-    args = parser.parse_args()
-    post_link = args.post_link
-
-    get_winner(insta_account_name, post_link)
-
+    
 
 if __name__ == '__main__':
     load_dotenv()
@@ -58,4 +42,12 @@ if __name__ == '__main__':
     insta_pass = os.getenv('INSTA_PASS')
     bot = Bot()
     bot.login(username=insta_login, password=insta_pass)
-    main()
+    insta_account_name = os.getenv('INSTA_GROUP_NAME')
+
+    parser = argparse.ArgumentParser(description='Enter your post link')
+    parser.add_argument('post_link', help='Enter post url')
+    args = parser.parse_args()
+    post_link = args.post_link
+
+    performed_users = get_performed_users(insta_account_name, post_link)
+    print(choice(performed_users))
